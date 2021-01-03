@@ -1,6 +1,7 @@
 
-import React from "react";
+import React from "react"
 
+import Form from 'react-bootstrap/Form'
 
  class Register  extends React.component {
     constructor(props){
@@ -60,14 +61,14 @@ import React from "react";
     render(){
    return (
        <div>
-           <form onSubmit={this.handelSubmit} method="POST"> 
+           <form onSubmit={this.submithandler} method="POST"> 
 <h1>User registration</h1>
 <label>firstname:</label><input type="text"  value={this.state.firstname} onChange={this.firsthandler} placeholder="Firstname..." /><br/>
 <label>lastname:</label><input type="text"  value={this.state.lastname} onChange={this.lasthandler} placeholder="lastname..." /><br/>
 <label>password:</label><input type="text"  value={this.state.password} onChange={this.passwordhandler} placeholder="password..." /><br/>
 <label>email:</label><input type="text"  value={this.state.email} onChange={this.emailhandler} placeholder="email..." /><br/>
 <label>username:</label><input type="text"  value={this.state.username} onChange={this.usernamehandler} placeholder="username..." /><br/>
-<input type="submit" value="submit"/>
+<input type="submit" onClick={this.submithandler} value="submit"/>
            </form>
 
 
