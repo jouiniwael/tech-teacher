@@ -121,6 +121,11 @@ class Course extends react.component{
     <Form.Control value={this.state.assimilation} type="range" />
   </Form.Group>
 </Form>
+<Form>
+  <Form.Group>
+    <Form.File id="exampleFormControlFile1" label="download your documents" />
+  </Form.Group>
+</Form>
 <Button  onClick={this.saveinformation.bind(this)} variant="primary" size="lg" active>
     Save your information
   </Button>{' '}
