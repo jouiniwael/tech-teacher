@@ -5,7 +5,7 @@ import Register from '/.register'
 
 
 
-class Landing extends React.component{
+class Landing extends React.Component{
     constructor(props){
         super(props)
         this.state=Login,

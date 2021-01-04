@@ -11,11 +11,11 @@ app.use(express.urlencoded({extended:true}));
 
 app.post('/register',(req,res)=>{ 
     console.log(req.body.firstname,req.body.lastname,req.body.password,req.body.email,req.body.username)
-var firstname=req.body.firstname;
-var lastname=req.body.lastname;
-var password=req.body.password;
-var email=req.body.email;
-var username=req.body.username;
+var user =req.body.user;
+// var lastname=req.body.lastname;
+// var password=req.body.password;
+// var email=req.body.email;
+// var username=req.body.username;
 })
 
 app.post('/save',(req,res)=>{

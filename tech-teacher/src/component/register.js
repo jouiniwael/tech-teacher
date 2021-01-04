@@ -1,9 +1,8 @@
 
-import React from "react"
+import React from "react";
+import axios from 'axios';
 
-import Form from 'react-bootstrap/Form'
-
- class Register  extends React.component {
+ class Register  extends React.Component {
     constructor(props){
         super(props)
         this.state={
@@ -44,7 +43,7 @@ import Form from 'react-bootstrap/Form'
         })
     }
 
-    submithandler=(event)=>{
+    handelSubmit=(event)=>{
        alert('${this.state.firstname} ${this.state.firstname} registred succesfully!!' )
        this.setState({
         firstname:"",
@@ -71,14 +70,14 @@ import Form from 'react-bootstrap/Form'
     render(){
    return (
        <div>
-           <form onSubmit={this.submithandler} > 
+           <form onSubmit={this.handelSubmit} > 
 <h1>User registration</h1>
 <label>firstname:</label><input type="text"  value={this.state.firstname} onChange={this.firsthandler} placeholder="Firstname..." /><br/>
 <label>lastname:</label><input type="text"  value={this.state.lastname} onChange={this.lasthandler} placeholder="lastname..." /><br/>
 <label>password:</label><input type="text"  value={this.state.password} onChange={this.passwordhandler} placeholder="password..." /><br/>
 <label>email:</label><input type="text"  value={this.state.email} onChange={this.emailhandler} placeholder="email..." /><br/>
 <label>username:</label><input type="text"  value={this.state.username} onChange={this.usernamehandler} placeholder="username..." /><br/>
-<input type="submit" onClick={this.submithandler} value="submit"/>
+<input type="submit" onClick={this.handelSubmit} value="submit"/>
            </form>
 
 
